@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  background-color: #f7f7f7;
+
+
+}
+
+.machines-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.machine-card{
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.machine-card__disabled{
+  background-color: gray;
+  pointer-events: none;
+}
+
+.machine-card span{
+  color: black;
+  font-weight: bold;
+}
+
+/* disable events on machin card element in order to make e.target work in js  */
+.machine-card *{
+  pointer-events: none;
+}
